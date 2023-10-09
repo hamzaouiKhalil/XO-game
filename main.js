@@ -46,11 +46,11 @@ function addingCounter(){
 var counterX = 0
 var counterO = 0
    return  function check3Buttons(b1, b2 ,b3){
-    if (b1.innerHTML !== "" && b2.innerHTML === b1.innerHTML && b3.innerHTML === b1.innerHTML){
+    if (b1.innerHTML !== "" && b2.innerHTML === b1.innerHTML && b3.innerHTML === b1.innerHTML && XO.innerHTML !== ""){
         b1.style.backgroundColor = "limegreen";
         b2.style.backgroundColor = "limegreen";
         b3.style.backgroundColor = "limegreen";
-        XO.innerHTML = ""
+       
         if(b1.innerHTML === "O"){
             ++counterO
             document.getElementById("counterO").innerHTML = counterO
@@ -60,6 +60,7 @@ var counterO = 0
             document.getElementById("counterX").innerHTML = counterX
             
         }
+        XO.innerHTML = ""
     }
 
 }}
