@@ -15,7 +15,7 @@ button{
 
 }
 body{
-    background-color: black;
+    background-image: url("https://img.freepik.com/premium-photo/abstract-black-textured-background-with-scratches_130265-12474.jpg");
 }
 select{
     margin-top: 40px;
@@ -35,4 +35,11 @@ p{
 }
 #counterDiv{
     margin-top: 30px;
+}
+input{
+    height: 40px;
+    width: 300px;
+}
+#maxButton{
+    height: 47px;
 }

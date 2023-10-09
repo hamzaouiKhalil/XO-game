@@ -1,3 +1,4 @@
+
 var XO = document.getElementById("XO")
 var button1 = document.getElementById("button1")
 var button2 = document.getElementById("button2")
@@ -9,6 +10,15 @@ var button7 = document.getElementById("button7")
 var button8 = document.getElementById("button8")
 var button9 = document.getElementById("button9")
 
+function confirmMax(){
+    var maxInput = parseInt($("#maxInput").val())
+    if(!maxInput){
+        maxInput = 3
+    }
+    $("#max").html(`<p>You need to win ${maxInput} games</p>`)
+    return maxInput
+}
+confirmMax()
 function selectSquare(){
     if(this.innerHTML !== "") return;
     this.innerHTML = XO.value;
@@ -66,9 +76,22 @@ var counterO = 0
             
         }
         XO.innerHTML = ""
-        
+
  
         }
+        if(counterX >= confirmMax()){
+            counterO = 0
+            counterX = 0
+            $("#gif").html(`<p>playerX has won the set</p><br><img src = "https://i.giphy.com/media/XnCTRxv76eI9fqzNMO/200w.webp">`)
+
+        }
+        if(counterO >= confirmMax()){
+            counterO = 0
+            counterX = 0
+            $("#gif").html(`<p> playerO has won the set</p><br><img src = "https://i.giphy.com/media/XnCTRxv76eI9fqzNMO/200w.webp">`)
+            
+        }
+
     }
 
 }
