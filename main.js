@@ -36,8 +36,11 @@ function resetGame(){
     for (let i = 1; i <= 9; i++) {
         document.getElementById(`button${i}`).innerHTML = "";
         document.getElementById(`button${i}`).style.backgroundColor = "";
-        XO.innerHTML =  '<option value="X">X</option>\n        <option value="O">O</option>'        
+        XO.innerHTML =  '<option value="X">X</option>\n        <option value="O">O</option>'
+
     }
+    
+    $("#gif").empty()
 }
 
 
@@ -54,16 +57,21 @@ var counterO = 0
         if(b1.innerHTML === "O"){
             ++counterO
             document.getElementById("counterO").innerHTML = counterO
+            $("#gif").append(`<p>playerO</p><br><img src="https://media3.giphy.com/media/o75ajIFH0QnQC3nCeD/200.webp?cid=ecf05e47w0wz2kbdbegit00qa7d93yy351tgu5wp4igvwnyg&ep=v1_gifs_search&rid=200.webp&ct=g" alt="gif">`)
         }
         if(b1.innerHTML === "X"){
             ++counterX
             document.getElementById("counterX").innerHTML = counterX
+            $("#gif").append(`<p>playerX</p><br><img src="https://media3.giphy.com/media/o75ajIFH0QnQC3nCeD/200.webp?cid=ecf05e47w0wz2kbdbegit00qa7d93yy351tgu5wp4igvwnyg&ep=v1_gifs_search&rid=200.webp&ct=g" alt="gif">`)
             
         }
         XO.innerHTML = ""
+        
+ 
+        }
     }
 
-}}
+}
  
 var check3Button = addingCounter()
 
