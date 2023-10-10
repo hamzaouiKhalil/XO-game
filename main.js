@@ -82,12 +82,16 @@ var counterO = 0
         if(counterX >= confirmMax()){
             counterO = 0
             counterX = 0
+            document.getElementById("counterO").innerHTML = counterO
+            document.getElementById("counterX").innerHTML = counterX
             $("#gif").html(`<p>playerX has won the set</p><br><img src = "https://i.giphy.com/media/XnCTRxv76eI9fqzNMO/200w.webp">`)
 
         }
         if(counterO >= confirmMax()){
             counterO = 0
             counterX = 0
+            document.getElementById("counterO").innerHTML = counterO
+            document.getElementById("counterX").innerHTML = counterX
             $("#gif").html(`<p> playerO has won the set</p><br><img src = "https://i.giphy.com/media/XnCTRxv76eI9fqzNMO/200w.webp">`)
             
         }

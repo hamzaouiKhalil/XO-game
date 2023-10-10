@@ -15,7 +15,8 @@ button{
 
 }
 body{
-    background-image: url("https://img.freepik.com/premium-photo/abstract-black-textured-background-with-scratches_130265-12474.jpg");
+    background-image: url(/images.png);
+    
 }
 select{
     margin-top: 40px;
@@ -43,3 +44,12 @@ input{
 #maxButton{
     height: 47px;
 }
+
+#image1{
+    float: left;
+    width: 100px;
+    height: 200px;
+}
+  
+
+  
